@@ -115,11 +115,14 @@
             let txt = cn.textContent ;
             let pos = Model.pos ;
             if(txt === Model.learning[pos].cn){
-               UI.response("答对了!");
+            
+              let a=String.fromCodePoint("0x1F469");
+               UI.response(a+"答对了!"+a);
                Model.learning[pos].level -- ;
                this.className += ' right' ;
             }else{
-               UI.response("答错了!");
+               let a=String.fromCodePoint("0x1F469");
+               UI.response(a+"答错了!"+a);
                Model.learning[pos].level ++ ;
                this.className += ' wrong' ;
             }
